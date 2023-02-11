@@ -16,7 +16,7 @@ export default function Login() {
     //when login
     const onLogin = () => {
         console.log("Email is : " + email)
-        
+        console.log("Hiiiiii");
     }
 
     return (
