@@ -4,6 +4,7 @@ import { Button } from 'react-native-paper';
 import { TextInput } from 'react-native-paper';
 import Icon from 'react-native-vector-icons/MaterialCommunityIcons';
 import { DatePickerInput } from 'react-native-paper-dates';
+import lankaNIC from 'lanka-nic';
 
 export default function Login() {
 
@@ -15,6 +16,7 @@ export default function Login() {
     //when login
     const onLogin = () => {
         console.log("Email is : " + email)
+        
     }
 
     return (
