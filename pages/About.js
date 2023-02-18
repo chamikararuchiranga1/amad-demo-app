@@ -1,13 +1,14 @@
 import { View, Text } from 'react-native'
 import React from 'react'
 import { Button } from 'react-native-paper';
+import RoundButton from './RoundButton';
 
 export default function About() {
     return (
         <View style={{ flex: 1 }}>
-            <View style={{ flex: 1, flexDirection: 'row' }}>
+            <View style={{ flex: 1, flexDirection: 'row',gap:10 }}>
                 <View style={{ backgroundColor: '#30E3DF', flex: 1 }}>
-
+                    <RoundButton/>
                 </View>
 
                 <View style={{ backgroundColor: 'green', flex: 1 }}>
