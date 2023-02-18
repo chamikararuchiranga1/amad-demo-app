@@ -4,7 +4,6 @@ import { Button } from 'react-native-paper';
 import { TextInput } from 'react-native-paper';
 import Icon from 'react-native-vector-icons/MaterialCommunityIcons';
 import { DatePickerInput } from 'react-native-paper-dates';
-import lankaNIC from 'lanka-nic';
 
 export default function Login() {
 
@@ -58,7 +57,8 @@ const styles = StyleSheet.create({
     txt1: {
         width: '80%',
         marginLeft: '10%',
-        marginTop: '30%'
+        marginTop: '30%',
+        color: '#fff'
     },
     txt2: {
         width: '80%',
