@@ -8,7 +8,7 @@ import About from "./pages/About";
 function App() {
   return (
     <View style={{flex:1}}>
-      <About/>
+      <Home/>
     </View>
   )
 }
