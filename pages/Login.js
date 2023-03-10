@@ -5,7 +5,7 @@ import { TextInput } from 'react-native-paper';
 import Icon from 'react-native-vector-icons/MaterialCommunityIcons';
 import { DatePickerInput } from 'react-native-paper-dates';
 
-export default function Login() {
+export default function Login({navigation}) {
 
     //this is a state
     const [email, setEmail] = useState('');
@@ -14,7 +14,7 @@ export default function Login() {
 
     //when login
     const onLogin = () => {
-        console.log("Email is : " + email)
+        navigation.navigate('DrawerNav')
     }
 
     return (
