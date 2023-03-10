@@ -1,27 +1,38 @@
-import { View, Text } from 'react-native'
-import React, { useEffect,useState } from 'react'
-import StarButton from '../components/StarButton'
-import { Button } from 'react-native-paper'
-
-
-const whenClick=()=>{
-
-}
+import { View, Text, FlatList } from 'react-native'
+import React, { useEffect, useState } from 'react'
 
 export default function Home() {
-  const [name,setName] = useState(''); 
-  const [address,setAddress] = useState(''); 
+  const [data, setData] = useState([]);
+
+  const loadData = () => {
+    fetch('https://jsonplaceholder.typicode.com/posts')
+      .then((response) => response.json())
+      .then((json) => setData(json));
+  }
 
   //2 moments--->when component render | 
   useEffect(() => {
-    console.log("hyyyyyy...");
-  },[]);
+    loadData();
+  }, []);
 
 
   return (
     <View>
       <Text>Home</Text>
-      <Button onPress={()=>{setName("Yasindu")}}>Click Me To Change State</Button>
+
+      <FlatList
+        data={data}
+        renderItem={({ item }) => {
+          return (
+            <View style={{ marginBottom: 20 }}>
+              <Text >{item.title}</Text>
+              <Text>{item.body}</Text>
+            </View>
+          )
+        }}
+        keyExtractor={item => item.id}
+      />
     </View>
   )
 }
+
